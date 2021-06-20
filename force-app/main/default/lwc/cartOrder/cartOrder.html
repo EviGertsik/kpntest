@@ -1,0 +1,22 @@
+<!-- Cart Order -->
+<template>
+    <lightning-card  title="Cart Order">
+        <template if:true={isLoading}>
+            <div>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <template if:true={orderProducts}>
+            <div class="slds-m-around_medium">
+                <lightning-datatable
+                        key-field="Id"
+                        data={orderProducts}
+                        columns={columns}
+                        hide-checkbox-column
+                        resize-column-disabled
+                        onrowaction={viewRecord}>
+                </lightning-datatable>
+            </div>
+        </template>
+    </lightning-card>
+</template>

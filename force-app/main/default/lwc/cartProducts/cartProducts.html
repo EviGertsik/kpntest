@@ -1,0 +1,15 @@
+<!-- Cart Products -->
+<template>
+    <lightning-card  title="Cart Products">
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+                    key-field="Id"
+                    data={entries}
+                    columns={columns}
+                    hide-checkbox-column
+                    resize-column-disabled
+                    onrowaction={addProduct}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

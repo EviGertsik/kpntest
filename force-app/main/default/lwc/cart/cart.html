@@ -1,0 +1,9 @@
+<!-- Cart -->
+<template>
+    <lightning-card  title="Orders">
+        <c-cart-products onadd={addProductToOrder}></c-cart-products>
+        <p slot="footer">
+            <c-cart-order record-id={recordId} order-products={orderItems} is-loading={isLoading}></c-cart-order>
+        </p>
+    </lightning-card>
+</template>
